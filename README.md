@@ -1,2 +1,2 @@
-# component1
+# component
  Components designed by me
