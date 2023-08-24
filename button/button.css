@@ -41,6 +41,18 @@ body {
   transform: translateY(2px) scale(0.98);
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
+.btn-is-disabled, .btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+.btn--small {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+}
+.btn--large {
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+}
 .btn--solid {
   background-color: transparent;
   border: 1px solid #646262;
@@ -55,42 +67,54 @@ body {
   background-color: rgba(100, 98, 98, 0.2);
   border-color: transparent;
 }
-.btn--gradient {
-  padding: 0.5rem 2rem;
-  background: linear-gradient(90deg, #1a73e8, #e54b4b);
-  background-size: 200% auto;
-  color: #fff;
-  border: 0;
-}
 .btn--primary, .btn--dark, .btn--danger, .btn--success, .btn--warning {
   color: #fff;
 }
-.btn--light {
-  color: #333;
+.btn--primary svg, .btn--dark svg, .btn--danger svg, .btn--success svg, .btn--warning svg {
+  fill: #fff;
 }
-.btn--shadow {
+.btn--light, .btn--light svg {
+  color: #333;
+  fill: #333;
+}
+.btn--shaded {
   background-color: #1a73e8;
 }
-.btn--shadow:hover {
+.btn--shaded:hover {
   background-color: #1567d3;
   border-bottom-color: transparent;
   box-shadow: -1px 5px 10px 0 rgba(20, 20, 20, 0.2);
 }
-.btn--shadow:active {
+.btn--shaded:active {
   background-color: #1151a5;
   border-bottom-color: #0a2f5f;
 }
-.btn-is-disabled, .btn:disabled {
-  opacity: 0.65;
-  cursor: not-allowed;
+.btn--rounded {
+  border-radius: 100rem;
+  padding: 0.6rem 1.5rem;
 }
-.btn-small {
-  padding: 0.5rem 1.5rem;
-  font-size: 0.875rem;
+.btn--iconic {
+  border-radius: 100rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-.btn-big {
-  padding: 0.8rem 2.5rem;
+.btn--iconic svg {
+  padding: 0.7rem;
+}
+.btn--iconic.btn--small {
+  font-size: 0.7rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.btn--iconic.btn--large {
   font-size: 1.1rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 /**
@@ -287,149 +311,4 @@ body {
   color: #68b25b;
   background-color: rgba(104, 178, 91, 0.3);
   border-color: transparent;
-}
-
-/**
- * Component: Button
- * Modifier: Gradient Colors
- * --------------------------------------------------
- */
-.btn--gradient-primary-danger {
-  background-color: #1a73e8;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, #1a73e8, #e54b4b);
-}
-.btn--gradient-primary-danger:hover {
-  background-color: #1567d3;
-  border-bottom-color: transparent;
-}
-.btn--gradient-primary-danger:active {
-  background-color: #1151a5;
-  border-bottom-color: #0a2f5f;
-}
-
-.btn--gradient-primary-warning {
-  background-color: #1a73e8;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, #1a73e8, #f7b500);
-}
-.btn--gradient-primary-warning:hover {
-  background-color: #1567d3;
-  border-bottom-color: transparent;
-}
-.btn--gradient-primary-warning:active {
-  background-color: #1151a5;
-  border-bottom-color: #0a2f5f;
-}
-
-.btn--gradient-primary-success {
-  background-color: #1a73e8;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, #1a73e8, #68b25b);
-}
-.btn--gradient-primary-success:hover {
-  background-color: #1567d3;
-  border-bottom-color: transparent;
-}
-.btn--gradient-primary-success:active {
-  background-color: #1151a5;
-  border-bottom-color: #0a2f5f;
-}
-
-.btn--gradient-primary-light {
-  background-color: #1a73e8;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, #1a73e8, #f6f7f8);
-}
-.btn--gradient-primary-light:hover {
-  background-color: #1567d3;
-  border-bottom-color: transparent;
-}
-.btn--gradient-primary-light:active {
-  background-color: #1151a5;
-  border-bottom-color: #0a2f5f;
-}
-
-.btn--gradient-primary-dark {
-  background-color: #1a73e8;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, #1a73e8, #646262);
-}
-.btn--gradient-primary-dark:hover {
-  background-color: #1567d3;
-  border-bottom-color: transparent;
-}
-.btn--gradient-primary-dark:active {
-  background-color: #1151a5;
-  border-bottom-color: #0a2f5f;
-}
-
-.btn--gradient-primary-danger {
-  background-color: #e54b4b;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, #e54b4b, #1a73e8);
-}
-.btn--gradient-primary-danger:hover {
-  background-color: #e23535;
-  border-bottom-color: transparent;
-}
-.btn--gradient-primary-danger:active {
-  background-color: #c71d1d;
-  border-bottom-color: #841313;
-}
-
-.btn--gradient-danger-warning {
-  background-color: #e54b4b;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, #e54b4b, #f7b500);
-}
-.btn--gradient-danger-warning:hover {
-  background-color: #e23535;
-  border-bottom-color: transparent;
-}
-.btn--gradient-danger-warning:active {
-  background-color: #c71d1d;
-  border-bottom-color: #841313;
-}
-
-.btn--gradient-danger-success {
-  background-color: #e54b4b;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, #e54b4b, #68b25b);
-}
-.btn--gradient-danger-success:hover {
-  background-color: #e23535;
-  border-bottom-color: transparent;
-}
-.btn--gradient-danger-success:active {
-  background-color: #c71d1d;
-  border-bottom-color: #841313;
-}
-
-.btn--gradient-danger-light {
-  background-color: #e54b4b;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, #e54b4b, #f6f7f8);
-}
-.btn--gradient-danger-light:hover {
-  background-color: #e23535;
-  border-bottom-color: transparent;
-}
-.btn--gradient-danger-light:active {
-  background-color: #c71d1d;
-  border-bottom-color: #841313;
-}
-
-.btn--gradient-danger-dark {
-  background-color: #e54b4b;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, #e54b4b, #646262);
-}
-.btn--gradient-danger-dark:hover {
-  background-color: #e23535;
-  border-bottom-color: transparent;
-}
-.btn--gradient-danger-dark:active {
-  background-color: #c71d1d;
-  border-bottom-color: #841313;
 }

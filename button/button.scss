@@ -52,6 +52,24 @@ body {
    0 1px 3px 1px rgba(60, 64, 67, 0.15);
  }
 
+ &-is-disabled,
+ &:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+ }
+
+ &--small {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+ }
+
+ &--large {
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+ }
+
+ // Solid Buttons
+
  &--solid {
   background-color: transparent;
   border: 1px solid $dark-color;
@@ -68,13 +86,7 @@ body {
   }
  }
 
- &--gradient{
-  padding: 0.5rem 2rem;
-  background: linear-gradient(90deg, $primary-color, $danger-color);
-  background-size: 200% auto;
-  color: #fff;
-  border: 0;
- }
+ // Colorful Buttons
 
  &--primary,
  &--dark,
@@ -82,13 +94,20 @@ body {
  &--success,
  &--warning {
   color: #fff;
+  svg{
+    fill: #fff;
+  }
  }
 
- &--light {
+ &--light,
+ &--light svg {
   color: #333;
+  fill: #333;
  }
 
- &--shadow {
+ // Shaded Buttons
+
+ &--shaded {
   background-color: $primary-color;
   &:hover {
    background-color: darken($primary-color, 5%);
@@ -101,20 +120,37 @@ body {
   }
  }
 
- &-is-disabled,
- &:disabled {
-  opacity: 0.65;
-  cursor: not-allowed;
+ // Rounded Buttons
+
+ &--rounded {
+  border-radius: 100rem;
+  padding: 0.6rem 1.5rem;
  }
 
- &-small {
-  padding: 0.5rem 1.5rem;
-  font-size: 0.875rem;
- }
+ // Iconic Buttons
 
- &-big {
-  padding: 0.8rem 2.5rem;
-  font-size: 1.1rem;
+ &--iconic {
+  border-radius: 100rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+   padding: 0.7rem;
+  }
+  &.btn--small {
+   font-size: 0.7rem;
+   width: 2.5rem;
+   height: 2.5rem;
+  }
+  &.btn--large {
+   font-size: 1.1rem;
+   width: 3.5rem;
+   height: 3.5rem;
+  }
  }
 }
 
@@ -134,22 +170,6 @@ body {
   &:active {
    background-color: darken($color, 15%);
    border-bottom-color: darken($color, 30%);
-  }
- }
-}
-
-@mixin button-gradient-modifier($color1, $color2, $class) {
- .btn--gradient-#{$class} {
-  background-color: $color1;
-  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90deg, $color1, $color2);
-  &:hover {
-   background-color: darken($color1, 5%);
-   border-bottom-color: transparent;
-  }
-  &:active {
-   background-color: darken($color1, 15%);
-   border-bottom-color: darken($color1, 30%);
   }
  }
 }
@@ -206,21 +226,3 @@ body {
 @include button-solid-modifier($danger-color, danger);
 @include button-solid-modifier($warning-color, warning);
 @include button-solid-modifier($success-color, success);
-
-/**
- * Component: Button
- * Modifier: Gradient Colors
- * --------------------------------------------------
- */
-
-@include button-gradient-modifier($primary-color, $danger-color, primary-danger);
-@include button-gradient-modifier($primary-color, $warning-color, primary-warning);
-@include button-gradient-modifier($primary-color, $success-color, primary-success);
-@include button-gradient-modifier($primary-color, $light-color, primary-light);
-@include button-gradient-modifier($primary-color, $dark-color, primary-dark);
-@include button-gradient-modifier($danger-color,$primary-color, primary-danger);
-@include button-gradient-modifier($danger-color, $warning-color, danger-warning);
-@include button-gradient-modifier($danger-color, $success-color, danger-success);
-@include button-gradient-modifier($danger-color, $light-color, danger-light);
-@include button-gradient-modifier($danger-color, $dark-color, danger-dark);
-
