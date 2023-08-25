@@ -19,9 +19,9 @@ body {
  * Component: Button
  * --------------------------------------------------
  */
-.btn {
+._btn {
   display: inline-block;
-  padding: 0.75rem 2rem;
+  padding: 0.68rem 2rem;
   font-size: 1rem;
   border: 0;
   outline: 0;
@@ -34,66 +34,65 @@ body {
   transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
-.btn:not(.btn--solid):hover {
+._btn:not(._btn--solid):hover {
   transform: translateY(-1px);
 }
-.btn:not(.btn--solid):active {
+._btn:not(._btn--solid):active {
   transform: translateY(2px) scale(0.98);
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
-.btn-is-disabled, .btn:disabled {
+._btn-is-disabled, ._btn:disabled {
   opacity: 0.65;
   cursor: not-allowed;
 }
-.btn--small {
+._btn--small {
   padding: 0.5rem 1.5rem;
   font-size: 0.875rem;
 }
-.btn--large {
+._btn--large {
   padding: 0.8rem 2.5rem;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
-.btn--solid {
+._btn--solid {
   background-color: transparent;
   border: 1px solid #646262;
   box-shadow: none;
   color: #646262;
 }
-.btn--solid:hover {
+._btn--solid:hover {
   background-color: rgba(100, 98, 98, 0.1);
 }
-.btn--solid:active {
+._btn--solid:active {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
   background-color: rgba(100, 98, 98, 0.2);
   border-color: transparent;
 }
-.btn--primary, .btn--dark, .btn--danger, .btn--success, .btn--warning {
+._btn--primary, ._btn--dark, ._btn--danger, ._btn--success, ._btn--warning {
   color: #fff;
 }
-.btn--primary svg, .btn--dark svg, .btn--danger svg, .btn--success svg, .btn--warning svg {
+._btn--primary svg, ._btn--dark svg, ._btn--danger svg, ._btn--success svg, ._btn--warning svg {
   fill: #fff;
 }
-.btn--light, .btn--light svg {
+._btn--light, ._btn--light svg {
   color: #333;
   fill: #333;
 }
-.btn--shaded {
+._btn--shaded {
   background-color: #1a73e8;
 }
-.btn--shaded:hover {
+._btn--shaded:hover {
   background-color: #1567d3;
   border-bottom-color: transparent;
   box-shadow: -1px 5px 10px 0 rgba(20, 20, 20, 0.2);
 }
-.btn--shaded:active {
+._btn--shaded:active {
   background-color: #1151a5;
   border-bottom-color: #0a2f5f;
 }
-.btn--rounded {
+._btn--rounded {
   border-radius: 100rem;
-  padding: 0.6rem 1.5rem;
 }
-.btn--iconic {
+._btn--iconic {
   border-radius: 100rem;
   width: 3rem;
   height: 3rem;
@@ -103,15 +102,15 @@ body {
   align-items: center;
   justify-content: center;
 }
-.btn--iconic svg {
+._btn--iconic svg {
   padding: 0.7rem;
 }
-.btn--iconic.btn--small {
+._btn--iconic._btn--small {
   font-size: 0.7rem;
   width: 2.5rem;
   height: 2.5rem;
 }
-.btn--iconic.btn--large {
+._btn--iconic._btn--large {
   font-size: 1.1rem;
   width: 3.5rem;
   height: 3.5rem;
@@ -126,80 +125,80 @@ body {
  * Modifier: Colors
  * --------------------------------------------------
  */
-.btn--primary {
+._btn--primary {
   background-color: #1a73e8;
   border-bottom: solid 3px #1151a5;
 }
-.btn--primary:hover {
+._btn--primary:hover {
   background-color: #1567d3;
   border-bottom-color: transparent;
 }
-.btn--primary:active {
+._btn--primary:active {
   background-color: #1151a5;
   border-bottom-color: #0a2f5f;
 }
 
-.btn--danger {
+._btn--danger {
   background-color: #e54b4b;
   border-bottom: solid 3px #c71d1d;
 }
-.btn--danger:hover {
+._btn--danger:hover {
   background-color: #e23535;
   border-bottom-color: transparent;
 }
-.btn--danger:active {
+._btn--danger:active {
   background-color: #c71d1d;
   border-bottom-color: #841313;
 }
 
-.btn--warning {
+._btn--warning {
   background-color: #f7b500;
   border-bottom: solid 3px #ab7d00;
 }
-.btn--warning:hover {
+._btn--warning:hover {
   background-color: #dea200;
   border-bottom-color: transparent;
 }
-.btn--warning:active {
+._btn--warning:active {
   background-color: #ab7d00;
   border-bottom-color: #5e4500;
 }
 
-.btn--success {
+._btn--success {
   background-color: #68b25b;
   border-bottom: solid 3px #48833e;
 }
-.btn--success:hover {
+._btn--success:hover {
   background-color: #5ba64e;
   border-bottom-color: transparent;
 }
-.btn--success:active {
+._btn--success:active {
   background-color: #48833e;
   border-bottom-color: #2b4f25;
 }
 
-.btn--light {
+._btn--light {
   background-color: #f6f7f8;
   border-bottom: solid 3px #cbd1d7;
 }
-.btn--light:hover {
+._btn--light:hover {
   background-color: #e8eaed;
   border-bottom-color: transparent;
 }
-.btn--light:active {
+._btn--light:active {
   background-color: #cbd1d7;
   border-bottom-color: #a0abb5;
 }
 
-.btn--dark {
+._btn--dark {
   background-color: #646262;
   border-bottom: solid 3px #3d3c3c;
 }
-.btn--dark:hover {
+._btn--dark:hover {
   background-color: #575555;
   border-bottom-color: transparent;
 }
-.btn--dark:active {
+._btn--dark:active {
   background-color: #3d3c3c;
   border-bottom-color: #171616;
 }
@@ -209,105 +208,105 @@ body {
  * Modifier: Solid Colors
  * --------------------------------------------------
  */
-.btn--solid-primary {
+._btn--solid-primary {
   background-color: transparent;
   color: #1a73e8;
   border: 1px solid rgba(128, 128, 128, 0.2);
 }
-.btn--solid-primary-is-active {
+._btn--solid-primary-is-active {
   background-color: rgba(26, 115, 232, 0.2);
   border: 0px solid rgba(26, 115, 232, 0.2);
 }
-.btn--solid-primary-is-active:hover {
+._btn--solid-primary-is-active:hover {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
-.btn--solid-primary-is-active:active {
+._btn--solid-primary-is-active:active {
   box-shadow: none;
 }
-.btn--solid-primary:hover {
+._btn--solid-primary:hover {
   color: #1a73e8;
   background-color: rgba(26, 115, 232, 0.2);
   border-color: transparent;
 }
-.btn--solid-primary:active {
+._btn--solid-primary:active {
   color: #1a73e8;
   background-color: rgba(26, 115, 232, 0.3);
   border-color: transparent;
 }
 
-.btn--solid-danger {
+._btn--solid-danger {
   background-color: transparent;
   color: #e54b4b;
   border: 1px solid rgba(128, 128, 128, 0.2);
 }
-.btn--solid-danger-is-active {
+._btn--solid-danger-is-active {
   background-color: rgba(229, 75, 75, 0.2);
   border: 0px solid rgba(229, 75, 75, 0.2);
 }
-.btn--solid-danger-is-active:hover {
+._btn--solid-danger-is-active:hover {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
-.btn--solid-danger-is-active:active {
+._btn--solid-danger-is-active:active {
   box-shadow: none;
 }
-.btn--solid-danger:hover {
+._btn--solid-danger:hover {
   color: #e54b4b;
   background-color: rgba(229, 75, 75, 0.2);
   border-color: transparent;
 }
-.btn--solid-danger:active {
+._btn--solid-danger:active {
   color: #e54b4b;
   background-color: rgba(229, 75, 75, 0.3);
   border-color: transparent;
 }
 
-.btn--solid-warning {
+._btn--solid-warning {
   background-color: transparent;
   color: #f7b500;
   border: 1px solid rgba(128, 128, 128, 0.2);
 }
-.btn--solid-warning-is-active {
+._btn--solid-warning-is-active {
   background-color: rgba(247, 181, 0, 0.2);
   border: 0px solid rgba(247, 181, 0, 0.2);
 }
-.btn--solid-warning-is-active:hover {
+._btn--solid-warning-is-active:hover {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
-.btn--solid-warning-is-active:active {
+._btn--solid-warning-is-active:active {
   box-shadow: none;
 }
-.btn--solid-warning:hover {
+._btn--solid-warning:hover {
   color: #f7b500;
   background-color: rgba(247, 181, 0, 0.2);
   border-color: transparent;
 }
-.btn--solid-warning:active {
+._btn--solid-warning:active {
   color: #f7b500;
   background-color: rgba(247, 181, 0, 0.3);
   border-color: transparent;
 }
 
-.btn--solid-success {
+._btn--solid-success {
   background-color: transparent;
   color: #68b25b;
   border: 1px solid rgba(128, 128, 128, 0.2);
 }
-.btn--solid-success-is-active {
+._btn--solid-success-is-active {
   background-color: rgba(104, 178, 91, 0.2);
   border: 0px solid rgba(104, 178, 91, 0.2);
 }
-.btn--solid-success-is-active:hover {
+._btn--solid-success-is-active:hover {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }
-.btn--solid-success-is-active:active {
+._btn--solid-success-is-active:active {
   box-shadow: none;
 }
-.btn--solid-success:hover {
+._btn--solid-success:hover {
   color: #68b25b;
   background-color: rgba(104, 178, 91, 0.2);
   border-color: transparent;
 }
-.btn--solid-success:active {
+._btn--solid-success:active {
   color: #68b25b;
   background-color: rgba(104, 178, 91, 0.3);
   border-color: transparent;

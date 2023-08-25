@@ -1,0 +1,56 @@
+/**
+ * Component: Button
+ * --------------------------------------------------
+ */
+
+._card {
+ width: 100%;
+ max-width: 500px;
+ border-radius: 0.6rem;
+ border: 1px solid rgba(128, 128, 128, 0.466);
+ text-align: left;
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p {
+  margin: 0;
+  color: inherit;
+ }
+ .__cardimgcontainer {
+  display: flex;
+  width: 100%;
+  img {
+   width: auto;
+   height: 50px;
+   margin: 0 1rem;
+  }
+ }
+ &--header {
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.05);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.466);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+   padding: 1rem 1.5rem;
+  }
+ }
+ &--body {
+  padding: 1rem;
+  p{
+    font-weight: 400;
+  }
+ }
+ &--footer {
+ }
+ img {
+  width: 100%;
+  object-fit: cover;
+ }
+}

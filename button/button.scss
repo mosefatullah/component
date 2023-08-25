@@ -27,9 +27,9 @@ body {
  * --------------------------------------------------
  */
 
-.btn {
+._btn {
  display: inline-block;
- padding: 0.75rem 2rem;
+ padding: 0.68rem 2rem;
  font-size: 1rem;
  border: 0;
  outline: 0;
@@ -65,7 +65,7 @@ body {
 
  &--large {
   padding: 0.8rem 2.5rem;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
  }
 
  // Solid Buttons
@@ -94,8 +94,8 @@ body {
  &--success,
  &--warning {
   color: #fff;
-  svg{
-    fill: #fff;
+  svg {
+   fill: #fff;
   }
  }
 
@@ -124,7 +124,6 @@ body {
 
  &--rounded {
   border-radius: 100rem;
-  padding: 0.6rem 1.5rem;
  }
 
  // Iconic Buttons
@@ -141,12 +140,12 @@ body {
   svg {
    padding: 0.7rem;
   }
-  &.btn--small {
+  &._btn--small {
    font-size: 0.7rem;
    width: 2.5rem;
    height: 2.5rem;
   }
-  &.btn--large {
+  &._btn--large {
    font-size: 1.1rem;
    width: 3.5rem;
    height: 3.5rem;
@@ -160,7 +159,7 @@ body {
  */
 
 @mixin button-modifier($color, $class) {
- .btn--#{$class} {
+ ._btn--#{$class} {
   background-color: $color;
   border-bottom: solid 3px darken($color, 15%);
   &:hover {
@@ -175,7 +174,7 @@ body {
 }
 
 @mixin button-solid-modifier($color, $class) {
- .btn--solid-#{$class} {
+ ._btn--solid-#{$class} {
   background-color: transparent;
   color: $color;
   border: 1px solid rgba(grey, 0.2);
